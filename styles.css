@@ -1,0 +1,117 @@
+:root {
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    width: 650px;
+    height: auto;
+    margin: 150px auto;
+}
+
+.product-image {
+    width: 100%;
+}
+
+img {
+    width: inherit;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.product-description {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0 25px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+h4 {
+    text-transform: uppercase;
+    line-height: 0.3rem;
+    letter-spacing: 5px;
+    color: var(--darkGrayishBlue);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+
+.product-id {
+    font-family: "Fraunces";
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--veryDarkBlue);
+}
+.product-text {
+    color: var(--darkGrayishBlue);
+    font-size: 14px;
+    font-family: "Montserrat";
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--darkCyan);
+    font-family: "Fraunces";
+    font-size: 30px;
+}
+
+.span-pricing {
+    color: var(--darkGrayishBlue);
+    font-size: small;
+    font-family: "Montserrat";
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+button {
+    background: var(--darkCyan);
+    color: var(--white);
+    /* margin: auto; */
+    padding: 15px 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    /* vertical-align: middle; */
+}
+
+button:hover {
+    background: rgb(41, 61, 41);
+    transition: margin-right 5s ease-out;
+}
+
+span {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* @media screen and(max-width: 350px) {
+    body {
+        max-width: 720px;
+    }
+
+    .card {
+        display: block;
+        width: 375px;
+    }
+} */
