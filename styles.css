@@ -17,15 +17,19 @@ body {
 }
 
 .card {
-    display: flex;
-    justify-content: center;
-    width: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 650px;
     height: auto;
     margin: 150px auto;
+    overflow: hidden;
 }
 
 .product-image {
     width: 100%;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 img {
@@ -105,13 +109,15 @@ span {
     vertical-align: middle;
 }
 
-/* @media screen and(max-width: 350px) {
-    body {
-        max-width: 720px;
-    }
-
+@media screen and(max-width: 658px) {
     .card {
-        display: block;
-        width: 375px;
+        max-width: 300px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 800px;
     }
-} */
+    .product-image {
+        max-width: 100px;
+        size: cover;
+    }
+}
