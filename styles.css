@@ -8,59 +8,70 @@
 
 * {
     margin: 0;
-    padding: 0;
+
     box-sizing: border-box;
 }
 
 body {
     background-color: var(--cream);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 650px;
-    height: auto;
+    display: flex;
+    /* height: auto; */
     margin: 120px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    background: var(--white);
+    border-radius: 5px;
+    justify-content: center;
+    background-color: white;
+    /* align-items: center; */
 }
 
-.product-image {
-    background-image: url("./images/image-product-desktop.jpg");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+/* .product-image {
+    max-width: 100px;
+    margin: 5px 5px 0 5px;
+} */
+
+.chanel-perfume__1 {
+    max-width: 100%;
+    margin: 5px 5px 0 5px;
+}
+
+.chanel-perfume__2 {
+    display: none;
 }
 
 .product-content {
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 15px 5px;
+    width: 100%;
+    gap: 18px;
 }
 
-.product {
+.product-name {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     color: var(--darkGrayishBlue);
     opacity: 40%;
     letter-spacing: 3px;
     font-weight: 600;
-    padding-bottom: 15px;
     text-transform: uppercase;
 }
 
 .product-big__text {
     font-family: "Fraunces", sans-serif;
-    font-size: 37px;
-    padding-bottom: 20px;
+    font-size: 32px;
+    /* padding-bottom: 20px; */
     color: var(--veryDarkBlue);
 }
+
 .product-small__text {
     font-family: "Montserrat", sans-serif;
     color: var(--darkGrayishBlue);
     font-size: 14px;
     padding-bottom: 25px;
-    opacity: 30%;
 }
 
 .price {
@@ -72,10 +83,11 @@ body {
 .current-price {
     font-family: "Fraunces", sans-serif;
     color: var(--darkCyan);
-    font-size: 35px;
+    font-size: 38px;
     font-weight: 700;
-    margin-right: 60px;
+    margin-right: 50px;
 }
+
 .previous-price {
     font-family: "Fraunces", sans-serif;
     font-size: 12px;
@@ -87,37 +99,41 @@ button {
     background: var(--darkCyan);
     color: var(--white);
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     border: none;
     border-radius: 8px;
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 
 button:hover {
-    background: rgb(41, 61, 41);
-    transition: margin-right 5s ease-out;
+    background: rgb(41, 62, 41);
+    transition: 5s ease-out;
 }
 
 .btn-icon {
     margin-right: 10px;
+    width: 25px;
 }
 
-@media screen and(max-width: 600px) {
+@media screen and(width: 600px) {
     .card {
+        display: grid;
         max-width: 300px;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        height: 800px;
+        grid-template-rows: 1fr;
     }
-    .product-image {
-        background-image: url("./images/image-product-mobile.jpg");
-        background-size: cover;
+    .chanel-perfume__1 {
+        display: none;
+    }
+
+    .chanel-perfume__2 {
+        display: block;
     }
 }
